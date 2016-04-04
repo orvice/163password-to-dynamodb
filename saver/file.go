@@ -1,4 +1,4 @@
-package saver
+package main
 
 import (
 	"bufio"
