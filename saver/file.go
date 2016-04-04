@@ -1,21 +1,21 @@
 package saver
 
 import (
-	"io/ioutil"
-	"os"
 	"bufio"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"os"
 )
 
-func genFilePath(path,file string) string {
-	return path + file;
+func genFilePath(path, file string) string {
+	return path + file
 }
 
-func processFiles(path string){
+func processFiles(path string) {
 	files, _ := ioutil.ReadDir(path)
 	for _, f := range files {
-		file, err := os.Open(genFilePath(path,f.Name()))
+		file, err := os.Open(genFilePath(path, f.Name()))
 		if err != nil {
 			log.Fatal(err)
 		}
