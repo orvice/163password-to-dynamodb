@@ -15,7 +15,7 @@ func genFilePath(path,file string) string {
 func processFiles(path string){
 	files, _ := ioutil.ReadDir(path)
 	for _, f := range files {
-		file, err := os.Open(genFilePath(path,f))
+		file, err := os.Open(genFilePath(path,f.Name()))
 		if err != nil {
 			log.Fatal(err)
 		}
